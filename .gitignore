@@ -6,6 +6,7 @@
 
 # Allow Git-related files
 !README.rst
+!LICENSE.md
 !.gitignore
 
 # Allow LaTeX-related file types
