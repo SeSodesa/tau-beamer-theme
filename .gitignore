@@ -15,3 +15,7 @@
 !*.cls
 !*.sty
 !*.tex
+
+# Allow TAU logos, both normal and its negative
+!tau-logo/tau-logo.eps
+!tau-logo/tau-logo-nega.eps
