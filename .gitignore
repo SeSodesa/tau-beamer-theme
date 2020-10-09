@@ -6,6 +6,7 @@
 
 # Allow Git-related files
 !README.rst
+!LICENSE.md
 !LICENSE.GNU-GPLv3.md
 !LICENSE.LaTeX-1.3c.txt
 !.gitignore
