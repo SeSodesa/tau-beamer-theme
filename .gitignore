@@ -1,0 +1,14 @@
+# Disallow everything
+*
+
+# Allow directories
+!*/
+
+# Allow Git-related files
+!README.md
+!.gitignore
+
+# Allow LaTeX-related file types
+!*.cls
+!*.sty
+!*.tex
