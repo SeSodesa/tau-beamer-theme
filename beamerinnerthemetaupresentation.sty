@@ -1,0 +1,63 @@
+% Copyright (c) 2020, Santtu Söderholm <santtu.soderholm@tuni.fi>
+%
+% This file may be distributed and/or modified under
+%
+% 1. the LaTeX Project Public License and/or
+% 2. the GNU General Public License v3.
+%
+% Beamer Inner Themes
+% ===================
+%
+% An inner theme installs templates that generally dictate how the following
+% elements are typeset:
+%
+% • Title and part pages.
+% • Itemize environments.
+% • Enumerate environments.
+% • Description environments.
+% • Block environments.
+% • Theorem and proof environments.
+% • Figures and tables.
+% • Footnotes.
+% • Bibliography entries
+%
+
+
+\mode<presentation>
+
+% Beamer template for document background
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=TAUPURPLE] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  % Check for title page
+  \ifnum\thepage>1\relax%
+   \fill[color=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \node at (0.1\paperwidth, 0.95\paperheight) {\includegraphics[width=0.2\paperwidth]{tau-logo.png}};
+   \fi
+  \end{tikzpicture}
+}
+
+
+% Beamer template for title page
+\defbeamertemplate*{title page}{taupresentation}[1][]
+{ 
+  \begin{beamercolorbox}[wd=12cm, leftskip=1cm, #1]{title page logo}
+    \usebeamerfont{logo}\includegraphics[width=0.5\paperwidth]{tau-logo-nega.png}\par%
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[wd=12cm, leftskip=2cm, #1]{title page title}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[wd=12cm,leftskip=2cm,#1]{author}
+    \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+    \vskip0.2cm%
+  \begin{beamercolorbox}[wd=12cm,leftskip=2cm,#1]{date}
+    \usebeamerfont{author}\insertdate%
+  \end{beamercolorbox}
+  \vfill
+}
+
+\mode<all>
