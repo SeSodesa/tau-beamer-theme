@@ -47,13 +47,41 @@
 \end{enumerate}
 \end{frame}
 
-\section{Section With Math}
+\section{Section With A Table}
 
 \begin{frame}
 \frametitle{Frame with mathematics}
 \begin{equation}
 I = \int_a^b f(x) \,\mathrm d x
 \end{equation}
+\end{frame}
+
+\section{Tables}
+
+\begin{frame}
+\frametitle{Frame with a table (or two)}
+\begin{center}
+\captionof{table}{A table caption.}
+\begin{tabular}{l | l l }
+\toprule
+Header column & First data column & Second data column \\
+\midrule
+Header 1 & \(a_{1,1}\) & \(a_{1,2}\) \\
+Header 2 & \(a_{2,1}\) & \(a_{2,2}\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{center}
+\captionof{table}{A second table caption.}
+\begin{tabular}{l | l l }
+\toprule
+Header column & First data column & Second data column \\
+\midrule
+Header 1 & \(a_{1,1}\) & \(a_{1,2}\) \\
+Header 2 & \(a_{2,1}\) & \(a_{2,2}\) \\
+\bottomrule
+\end{tabular}
+\end{center}
 \end{frame}
 
 \end{document}
