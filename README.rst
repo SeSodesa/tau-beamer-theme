@@ -15,16 +15,17 @@ either ``4-3/main.tex`` or ``16-9/main.tex``,
 depending on which version one wants to use.
 
 Once you have chosen the proper size for your presentation,
-simply compile the respective ``main.tex`` file wht ``pdflatex``
-or ``lualatex``.
+simply compile the respective ``main.tex`` file with ``pdflatex``
+or ``lualatex``::
 
+  $ pdflatex main.tex
 
 Possible issues
 ---------------
 
-The relative TAU logo paths defined in::
+The relative TAU logo paths defined in ::
 
- {4-3, 16-9}/beamerinnerthemetaupresentation.sty
+ {4-3,16-9}/beamerinnerthemetaupresentation.sty
 
 might not work as intended on Windows.
 If ``pdflatex`` or ``lualatex`` complains about the images not being found,
