@@ -42,4 +42,14 @@
   \end{beamercolorbox}
 }
 
+% Head- and footlines
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \begin{beamercolorbox}[wd=\the\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \hfill%
+    \usebeamerfont{date in head/foot}\insertshortdate{} |
+    \insertframenumber{}/\inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}%
+}
+
 \mode<all>
