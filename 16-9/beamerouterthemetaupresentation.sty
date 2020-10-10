@@ -1,0 +1,45 @@
+% Copyright (c) 2020, Santtu Söderholm <santtu.soderholm@tuni.fi>
+%
+% This file may be distributed and/or modified under
+%
+% 1. the LaTeX Project Public License and/or
+% 2. the GNU General Public License v3.
+%
+% Beamer Outer Themes
+% ===================
+%
+% An outer theme dictates (roughly) the overall layout of frames.
+% It specifies where any navigational elements should go
+% (like a mini table of contents or navigational mini frames) and what
+% they should look like. Typically, an outer theme specifies how the following
+% elements are rendered:
+%
+% • The head- and footline.
+% • The sidebars.
+% • The logo.
+% • The frame title.
+%
+% An outer theme will not specify how things like itemize environments should be rendered.
+% That is the job of the respective inner theme.
+%
+
+\mode<presentation>
+
+% Frame title
+\defbeamertemplate*{frametitle}{taupresentation}[1][]
+{
+\vskip1cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox(0,0) rectangle(\the\paperwidth,0.2\paperheight);
+   \ifx\insertframesubtitle\@empty%
+      {\node[anchor=west, TAUPURPLE,font=\huge] at (0.5, 0.61){\insertframetitle};}
+    \else%
+      {\node[anchor=west, TAUPURPLE,font=\huge] at (0.5, 0.81){\insertframetitle};%
+       \node[anchor=west, TAUPURPLE,font=\Large] at (0.5, 0.41){\insertframesubtitle};}%
+    \fi
+  \end{tikzpicture}
+  \end{beamercolorbox}
+}
+
+\mode<all>

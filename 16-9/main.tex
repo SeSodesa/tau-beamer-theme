@@ -1,0 +1,59 @@
+% Copyright (c) 2020, Santtu Söderholm <santtu.soderholm@tuni.fi>
+%
+% This file may be distributed and/or modified under
+%
+% 1. the LaTeX Project Public License and/or
+% 2. the GNU General Public License v3.
+%
+
+\documentclass[tikz, aspectratio=169]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\title{An Example Presentation}
+\date{yyyy-mm-dd}
+\author[Söderholm]{Santtu Söderholm}
+
+\usetheme{taupresentation}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Table of contents}
+\tableofcontents
+\end{frame}
+
+\section{First section}
+
+\begin{frame}
+\frametitle{An Itemized Frame}
+\begin{itemize}
+\item Here are\ldots
+\item \ldots a few bullets.
+\end{itemize}
+\end{frame}
+
+\section{Second section}
+
+\begin{frame}
+\frametitle{An Enumerated Frame}
+\begin{enumerate}
+\item Here are\ldots
+\item \ldots a few bullets.
+\end{enumerate}
+\end{frame}
+
+\section{Section With Math}
+
+\begin{frame}
+\frametitle{Frame with mathematics}
+\begin{equation}
+I = \int_a^b f(x) \,\mathrm d x
+\end{equation}
+\end{frame}
+
+\end{document}

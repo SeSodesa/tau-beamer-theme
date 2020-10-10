@@ -1,0 +1,73 @@
+% Copyright (c) 2020, Santtu Söderholm <santtu.soderholm@tuni.fi>
+%
+% This file may be distributed and/or modified under
+%
+% 1. the LaTeX Project Public License and/or
+% 2. the GNU General Public License v3.
+%
+% Beamer Inner Themes
+% ===================
+%
+% An inner theme installs templates that generally dictate how the following
+% elements are typeset:
+%
+% • Title and part pages.
+% • Itemize environments.
+% • Enumerate environments.
+% • Description environments.
+% • Block environments.
+% • Theorem and proof environments.
+% • Figures and tables.
+% • Footnotes.
+% • Bibliography entries
+%
+
+
+\mode<presentation>
+
+% Beamer template for document background
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=TAUPURPLE] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  % Check for title page
+  \ifnum\thepage>1\relax%
+   \fill[color=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \node at (0.075\paperwidth, 0.93\paperheight) {\includegraphics[width=0.15\paperwidth]{../tau-logo/tau-logo.eps}};
+   \fi
+  \end{tikzpicture}
+}
+
+
+% Beamer template for title page
+\defbeamertemplate*{title page}{taupresentation}[1][]
+{ 
+  \vskip0.5cm%
+  \begin{beamercolorbox}[wd=12cm, leftskip=0.25cm, #1]{title page logo}
+    \usebeamerfont{logo}\includegraphics[width=0.3\paperwidth]{../tau-logo/tau-logo-nega.eps}\par%
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[wd=12cm, leftskip=0.75cm, #1]{title page title}
+    \usebeamerfont{title}\inserttitle\par%
+  \end{beamercolorbox}%
+  \vskip0.75cm%
+  \begin{beamercolorbox}[wd=12cm,leftskip=0.75cm,#1]{author}
+    \usebeamerfont{author}\insertauthor%
+  \end{beamercolorbox}
+    \vskip0.2cm%
+  \begin{beamercolorbox}[wd=12cm,leftskip=0.75cm,#1]{date}
+    \usebeamerfont{author}\insertdate%
+  \end{beamercolorbox}
+  \vfill
+}
+
+% Titles
+\setbeamerfont{title}{size=\Huge}
+
+% Items
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+
+
+\mode<all>
