@@ -33,7 +33,7 @@
   % Check for title page
   \ifnum\thepage>1\relax%
    \fill[color=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-   \node at (0.1\paperwidth, 0.95\paperheight) {\includegraphics[width=0.2\paperwidth]{../tau-logo/tau-logo.eps}};
+   \node at (0.1\paperwidth, 0.95\paperheight) {\includegraphics[width=0.2\paperwidth]{../tau-logo/tau-logo.pdf}};
    \fi
   \end{tikzpicture}
 }
@@ -43,7 +43,7 @@
 \defbeamertemplate*{title page}{taupresentation}[1][]
 { 
   \begin{beamercolorbox}[wd=12cm, leftskip=1cm, #1]{title page logo}
-    \usebeamerfont{logo}\includegraphics[width=0.5\paperwidth]{../tau-logo/tau-logo-nega.eps}\par%
+    \usebeamerfont{logo}\includegraphics[width=0.5\paperwidth]{../tau-logo/tau-logo-nega.pdf}\par%
   \end{beamercolorbox}%
   \vskip0.75cm%
   \begin{beamercolorbox}[wd=12cm, leftskip=2cm, #1]{title page title}
