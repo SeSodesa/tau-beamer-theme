@@ -17,7 +17,5 @@
 !*.tex
 
 # Allow TAU logos, both normal and its negative
-!tau-logo/tau-logo.eps
-!tau-logo/tau-logo-nega.eps
 !tau-logo/tau-logo.pdf
 !tau-logo/tau-logo-nega.pdf
