@@ -16,6 +16,8 @@
 \RequirePackage{caption}
 \RequirePackage{datetime2}
 \DTMsetdatestyle{iso}
+\RequirePackage{accsupp}
+\RequirePackage{xparse}
 
 % Beamer Settings
 \useinnertheme{taupresentation}
@@ -23,3 +25,14 @@
 \usecolortheme{taupresentation}
 
 \setbeamertemplate{navigation symbols}{}
+
+% Copyable equations with xparse and accsupp
+% Source: https://tex.stackexchange.com/a/119718
+\NewDocumentCommand{\copyable}{m}{%
+  \BeginAccSupp{%
+    ActualText=\detokenize{#1},%
+    method=escape,%
+  }%
+  #1
+  \EndAccSupp{}%
+}
