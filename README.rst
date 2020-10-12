@@ -14,11 +14,28 @@ The actual contents of the slides should be written in
 either ``4-3/main.tex`` or ``16-9/main.tex``,
 depending on which version one wants to use.
 
-Once you have chosen the proper size for your presentation,
-simply compile the respective ``main.tex`` file with ``pdflatex``
-or ``lualatex``::
+Author and document information should be set by modifying
+the values inside the braces ``{..}``, defined at the beginning of ``main.tex``::
 
-  $ pdflatex main.tex
+  % Author and document information.
+  % Change these to suit your needs.
+  \def\myauthor{Santtu Söderholm}
+  \def\mytitle{An Example Presentation}
+  \def\mysubject{This is the subject}
+  \def\mykeywords{latex, beamer, presentation}
+  \def\myproducer{LaTeX with hyperref}
+  \def\mycreator{pdflatex or lualatex}
+
+This data will be used to generate the front page and document metadata.
+Therefore these lines should not be removed.
+
+Once the document metadata has been entered and your content is in place,
+the presentation can be compiled by navigating to the folder that contains your ``main.tex`` file
+and typing
+
+  $ <compiler> main.tex
+
+Here ``<compiler>`` is either ``pdflatex`` or ``lualatex``.
 
 Possible issues
 ---------------
