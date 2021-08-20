@@ -37,7 +37,7 @@ Here `[compiler]` is either `pdflatex` or `lualatex`.
 
 ## Possible issues
 
-The relative TAU logo paths defined in ::
+The relative TAU logo paths defined in
 
     {4-3, 16-9}/beamerinnerthemetaupresentation.sty
 
