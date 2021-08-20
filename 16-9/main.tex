@@ -3,82 +3,14 @@
 % This file may be distributed and/or modified under the LaTeX Project Public License.
 %
 
-\documentclass[tikz, aspectratio=169]{beamer}
+\documentclass[tikz]{beamer}
 
-% Author and document information.
-% Change these to suit your needs.
-\def\myauthor{Santtu Söderholm}
-\def\mytitle{An Example Presentation}
-\def\mysubject{This is the subject}
-\def\mykeywords{latex, beamer, presentation}
-\def\myproducer{LaTeX with hyperref}
-\def\mycreator{pdflatex or lualatex}
+\input{../content/presentation-metadata.tex}
 
 \usetheme{taupresentation}
 
 \begin{document}
 
-\begin{frame}[noframenumbering, plain]
-\titlepage
-\end{frame}
-
-\begin{frame}[noframenumbering, plain]{Table of contents}
-\tableofcontents
-\end{frame}
-
-\section{First section}
-
-\begin{frame}{An Itemized Frame}
-\begin{itemize}
-\item Here are\ldots
-\item \ldots a few bullets.
-\end{itemize}
-\end{frame}
-
-\section{Second section}
-
-\begin{frame}{An Enumerated Frame}
-\begin{enumerate}
-\item Here are\ldots
-\item \ldots a few bullets.
-\end{enumerate}
-\end{frame}
-
-\section{Section With A Table}
-
-\begin{frame}{Frame with mathematics}
-\begin{equation}
-\copyable{
-  I = \int_a^b f(x) \,\mathrm d x
-}
-\end{equation}
-\end{frame}
-
-\section{Tables}
-
-\begin{frame}{Frame with a table (or two)}
-\begin{center}
-\captionof{table}{A table caption.}
-\begin{tabular}{l | l l }
-\toprule
-Header column & First data column & Second data column \\
-\midrule
-Header 1 & \(a_{1,1}\) & \(a_{1,2}\) \\
-Header 2 & \(a_{2,1}\) & \(a_{2,2}\) \\
-\bottomrule
-\end{tabular}
-\end{center}
-\begin{center}
-\captionof{table}{A second table caption.}
-\begin{tabular}{l | l l }
-\toprule
-Header column & First data column & Second data column \\
-\midrule
-Header 1 & \(a_{1,1}\) & \(a_{1,2}\) \\
-Header 2 & \(a_{2,1}\) & \(a_{2,2}\) \\
-\bottomrule
-\end{tabular}
-\end{center}
-\end{frame}
+\input{../content/subject-matter.tex}
 
 \end{document}
