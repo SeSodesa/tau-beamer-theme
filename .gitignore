@@ -15,6 +15,7 @@
 !*.cls
 !*.sty
 !*.tex
+!*.bib
 
 # Allow TAU logos, both normal and its negative
 !tau-logo/tau-logo.pdf
