@@ -1,3 +1,16 @@
 \usepackage[style=numeric, sorting=none]{biblatex}
 \addbibresource{../content/sources.bib}
 \usepackage{csquotes}
+
+\begin{filecontents*}[overwrite]{\jobname.xmpdata}
+\Title{\mytitle}
+\Author{\myauthor}
+\Subject{\mysubject}
+\Keywords{\mykeywords}
+\Creator{\mycreator}
+\end{filecontents*}
+
+% PDF/A
+\usepackage[pdf15, a-3b, mathxmp]{pdfx}
+\hypersetup{hidelinks}
+\usepackage{url}
