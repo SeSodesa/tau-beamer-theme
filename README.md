@@ -35,6 +35,15 @@ where `[folder] ∈ {4-3, 16-9}`, and entering the command
 
 Here `[compiler]` is either `pdflatex` or `lualatex`.
 
+**Note:** remember that LaTeΧ compilers always look for files such as images
+in relation to the used `main.tex` file or the so-called compilation context.
+If you place your image file `image.pdf` into the [`content`](./content)
+folder, you must then include the image with
+
+    \includegraphics[options]{../content/image.pdf}
+
+or your chosen LaTeΧ compiler will not find it.
+
 ## Possible issues
 
 The relative TAU logo paths defined in
