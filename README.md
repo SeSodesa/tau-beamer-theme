@@ -3,13 +3,14 @@
 This repository contains a LaTeX Beamer class theme for Tampere University
 -themed presentation slides. There are two versions available, in two
 different aspect ratios: `4:3` and `16:9`. These are located in the folders
-[`4-3`](./4-3/) and [`16-9`](./16-9/), respectively.
+[`4-3/`](./4-3/) and [`16-9/`](./16-9/), respectively.
 
 ## How-to
 
 The files the user of these templates needs to modify are found in the folder
-[`content`](./content/). The file `content/presentation-metadata.tex` needs to
-be filled in between the braces `{..}` with author and presentation
+[`content/`](./content/). The file
+[`content/presentation-metadata.tex`](./content/presentation-metadata.tex)
+needs to be filled in between the braces `{..}` with author and presentation
 information, in the format
 
     \def\myauthor{Santtu Söderholm}
@@ -31,7 +32,7 @@ desired `main.tex` file with
 
     cd [folder]
 
-where `[folder] ∈ {4-3, 16-9}`, and entering the command
+where `[folder]` ∈ {`4-3`, `16-9`}, and entering the command
 
     $ [compiler] main.tex
 
@@ -39,7 +40,7 @@ Here `[compiler]` is either `pdflatex` or `lualatex`.
 
 **Note:** remember that LaTeΧ compilers always look for files such as images
 in relation to the used `main.tex` file or the so-called compilation context.
-If you place your image file `image.pdf` into the [`content`](./content)
+If you place your image file `image.pdf` into the [`content/`](./content)
 folder, you must then include the image with
 ```latex
 \includegraphics{../content/image.pdf}
