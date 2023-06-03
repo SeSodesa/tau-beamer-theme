@@ -24,6 +24,8 @@ The actual subject matter or presentation is added to the file
 [`content/subject-matter.tex`](./content/subject-matter.tex), in standard
 LaTeΧ syntax.
 
+### Local use
+
 Depending on the expected display size, one should choose either the
 [`4:3`](./4-3/) or [`16:9`](./16-9/) version of the slide set for compilation.
 Once the document metadata has been entered and your content is in place, the
@@ -52,6 +54,18 @@ images, in which case only
 \includegraphics{image.pdf}
 ```
 should be enough to include an image into a presentation.
+
+### Using the project with Overleaf
+
+Using the project with Overleaf is as simple as downloading the latest
+Git-tagged version of the project as a ZIP file, uploading it to Overleaf as a
+new project and choosing which main file one wants to use. The downloading of
+the ZIP can be done on the Tags-page of this repository. Then on Overleaf, on
+the page that contains your projects ([link](https://www.overleaf.com/project)),
+press <kbd>New Project</kbd> → <kbd>Upload Project</kbd> → <kbd>Select a .zip
+file</kbd>. Then on the generated project page, choose the desired aspect
+ratio for the presentation, by selecting <kbd>Menu</kbd> → <kbd>Main
+document</kbd> → <kbd>4-3/main.tex</kbd> or <kbd>16-9/main.tex</kbd>.
 
 ## Possible issues
 
