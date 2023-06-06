@@ -4,10 +4,13 @@ The files and folders in this directory are to be filled in by the user of
 this presentation template. The intended contents of the files are as follows:
 
 * [`presentation-metadata.tex`](./presentation-metadata.tex):
-  Contains author and document information in the form of `\def\key{value}`.
+  Contains author and document information, in addition to document-wide
+  settings, in the form of `\def\key{value}`.
 
 * [`preamble.tex`](./preamble.tex):
-  Own packages can be entered here with `\usepackage{package-name}`.
+  Own packages can be entered here with `\usepackage{package-name}`. Any LaTeΧ
+  command definitions should also be entered here, unless the definitions need
+  to be added or changed in the middle of the presentation.
 
 * [`subject-matter.tex`](./subject-matter.tex):
   This is where one writes the actual contents of the presentation, in

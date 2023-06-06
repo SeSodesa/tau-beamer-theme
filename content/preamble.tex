@@ -1,14 +1,27 @@
+%%% preamble.tex
+%
+% This is where one loads LaTeX packages and defines their own commands. Some
+% of the commands you see here are defined in the file
+% presentation-metadata.tex.
+%
+
+%% Load packages.
+
 \usepackage[utf8]{inputenc}
 
-\usepackage[style=numeric, sorting=none]{biblatex}
+\usepackage[\mylanguage]{babel}
+
+\usepackage[\citationsettings]{biblatex}
 
 \addbibresource{../content/sources.bib}
 
 \usepackage{csquotes}
 
-% Set graphicspath to contents/images/, so users don't need to enter the full path of the file.
+%% Set graphicspath to contents/images/, so users don't need to enter the full path of the file.
 
 \graphicspath{{../content/images/}}
+
+%% Write metadata to an external file, where pdfx can read it from.
 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
 \Title{\mytitle}
@@ -18,7 +31,8 @@
 \Creator{\mycreator}
 \end{filecontents*}
 
-% PDF/A
+%% PDF/A
+
 \usepackage[pdf15, a-3b, mathxmp]{pdfx}
 \hypersetup{hidelinks}
 \usepackage{url}
