@@ -30,7 +30,7 @@
   % Check for title page
   \ifnum\thepage>1\relax%
    \fill[color=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
-   \node at (0.1\paperwidth, 0.95\paperheight) {\includegraphics[width=0.2\paperwidth]{../tau-logo/tau-logo.pdf}};
+   \node at (\taulogox, \taulogoy) {\includegraphics[width=\taulogow]{../tau-logo/tau-logo.pdf}};
    \fi
   \end{tikzpicture}
 }

@@ -39,6 +39,34 @@
   {}
   {}
 
+%% Define inline verbatim command with xparse.
+
+\NewDocumentCommand\code{m}{\texttt{#1}}
+
+\NewDocumentCommand\latexcommand{m}{\textbackslash\code{#1}}
+
+%% Define temporary image background style command.
+%
+% Invoke before a frame to set a background image for the following frames. If
+% a background image is to be set for a single frame, surround this command
+% and the frame itself with \begingroup … \endgroup.
+%
+\NewDocumentCommand\setbackgroundimage{
+    O{0.9}   % Optional image width in relation to paper width, given inside [⋅].
+    D(){0.5} % Optional image x position in relation to paper height, given inside (⋅).
+    D<>{0.4} % Optional image y position in relation to paper height, given inside <⋅>.
+    m        % A mandatory path to the background image.
+}{
+    \setbeamertemplate{background}{
+        \begin{tikzpicture}
+            \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+            \fill[color=white] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+            \node at (\taulogox, \taulogoy) {\includegraphics[width=\taulogow]{../tau-logo/tau-logo.pdf}};
+            \node at (#2\paperwidth, #3\paperheight) {\includegraphics[width=#1\paperwidth]{#4}};
+        \end{tikzpicture}
+    }
+}
+
 %% Write metadata to an external file, where pdfx can read it from.
 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
