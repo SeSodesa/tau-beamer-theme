@@ -21,6 +21,24 @@
 
 \graphicspath{{../content/images/}}
 
+%% Patch the item separation between itemize and enumerate items.
+
+\usepackage{xpatch}
+
+\xpatchcmd
+  {\itemize}
+  {\def\makelabel}
+  {\setlength{\itemsep}{1ex}\def\makelabel}
+  {}
+  {}
+
+\xpatchcmd
+  {\enumerate}
+  {\def\makelabel}
+  {\setlength{\itemsep}{1ex}\def\makelabel}
+  {}
+  {}
+
 %% Write metadata to an external file, where pdfx can read it from.
 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
