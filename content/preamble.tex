@@ -86,6 +86,10 @@
     \endgroup
 }
 
+%% Citation bracket color.
+
+\DeclareOuterCiteDelims{cite}{\textcolor{TAUPURPLE}{\bibopenbracket}}{\textcolor{TAUPURPLE}{\bibclosebracket}}
+
 %% Write metadata to an external file, where pdfx can read it from.
 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
@@ -99,5 +103,11 @@
 %% PDF/A
 
 \usepackage[pdf15, a-3b, mathxmp]{pdfx}
-\hypersetup{hidelinks}
+\hypersetup{
+    colorlinks,
+    allcolors=black,
+    urlcolor=TAUPURPLE,
+    citecolor=TAUPURPLE,
+    anchorcolor=TAUPURPLE
+}
 \usepackage{url}
