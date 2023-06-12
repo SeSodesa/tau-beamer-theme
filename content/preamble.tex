@@ -67,6 +67,25 @@
     }
 }
 
+%% A command for a final unnumbered page.
+
+\NewDocumentCommand\finalpage{m}{
+    \begingroup
+        \setbeamertemplate{background}{
+            \begin{tikzpicture}
+                \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight);
+                \fill[color=TAUPURPLE] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+            \end{tikzpicture}
+        }
+        \begin{frame}[noframenumbering]{}
+            \vfill
+            \centering
+            \color{TAUWHITE}
+            \resizebox{0.6\textwidth}{!}{#1}
+        \end{frame}
+    \endgroup
+}
+
 %% Write metadata to an external file, where pdfx can read it from.
 
 \begin{filecontents*}[overwrite]{\jobname.xmpdata}
