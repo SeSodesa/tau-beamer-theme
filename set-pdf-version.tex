@@ -1,0 +1,33 @@
+%%% set-pdf-version.tex
+%
+% This file is loaded by main.tex before any other operations, so that PDF
+% version is set correctly for accessibility features.
+%
+
+\RequirePackage{ifluatex}
+
+\def\mypdfminorversion{7}
+
+\ifluatex
+
+    % This package is needed for pdfx compatibility.
+
+    \RequirePackage{luatex85}
+
+    \directlua {
+        if pdf.getminorversion() \string~=\mypdfminorversion then
+            if (status.pdf_gone and status.pdf_gone > 0)
+            or (status.pdf_ptr and status.pdf_ptr > 0)
+            then
+                tex.error("PDF version cannot be changed anymore.")
+            else
+                pdf.setminorversion(\mypdfminorversion)
+            end
+        end
+    }
+
+\else
+
+    \pdfminorversion=\mypdfminorversion
+
+\fi
