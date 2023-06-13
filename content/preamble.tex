@@ -11,11 +11,23 @@
 
 \usepackage[\mylanguage]{babel}
 
+\usepackage{fourier}
+
+\usepackage{mathtools}
+
 \usepackage[\citationsettings]{biblatex}
 
 \addbibresource{../content/sources.bib}
 
 \usepackage{csquotes}
+
+%% Commands.
+
+\NewDocumentCommand\bvec{ m }{\vec{\mathbf{#1}}}
+
+\DeclareMathOperator\divop{div}
+
+\DeclarePairedDelimiter\arcs{(}{)}
 
 %% Set graphicspath to contents/images/, so users don't need to enter the full path of the file.
 

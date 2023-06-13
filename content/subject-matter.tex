@@ -32,11 +32,39 @@
 \section{Section with mathematics}
 
 \begin{frame}{Frame with mathematics}
-\begin{equation}
-\copyable{
-  I = \int_a^b f(x) \,\mathrm d x
-}
-\end{equation}
+
+The approximated Navier--Stokes equations
+\begin{align*}
+        \rho\mathbf u_t + \rho\divop\arcs{\mathbf u\otimes\mathbf u} - \divop\arcs{\mu\mathbf{Su}} + \nabla p
+        &=
+        \rho\mathbf f
+        &
+        \text{in}\quad\Omega\times[0,T]
+    \\
+        \divop\mathbf u
+        &=
+        0
+        &
+        \text{in}\quad\Omega\times[0,T]
+    \\
+        \mathbf u\arcs{\mathbf x; 0}
+        &=
+        0
+        &
+        \text{on}\quad\Omega\times[0,T]
+    \\
+        p\arcs{\mathbf x; t}
+        &=
+        p^{\arcs{\mathcal{B}}}\arcs{\mathbf x; t}
+        -
+        \frac{1}{\upsilon\lambda}
+        \frac{\partial p}{\partial\bvec n}
+        &
+        \text{on}\quad\partial\Omega
+\end{align*}
+may be used to solve for the pressure \(p\) and velocity \(\mathbf u\) in
+blood vessels.~\cite{samavaki--etal-2023}
+
 \end{frame}
 
 \section{A Biased section}
@@ -53,9 +81,9 @@
 
 \begin{frame}{A frame with a background image}
 
-	The image you see in this frame is a bacground image. Any text written
-	here will flow over it. Image transparency might need to be set
-	appropriately, for text to be visible.
+    The image you see in this frame is a bacground image. Any text written
+    here will flow over it. Image transparency might need to be set
+    appropriately, for text to be visible.
 
 \end{frame}
 
